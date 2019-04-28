@@ -43,7 +43,16 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[CustomBox()],
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(top: 5, bottom: 5),
+              child: CustomBox(),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 5),
+              child: CustomSizedBox(),
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -54,5 +63,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-

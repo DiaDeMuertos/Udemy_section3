@@ -25,3 +25,23 @@ class CustomBox extends StatelessWidget {
     );
   }
 }
+
+class CustomSizedBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        print('Tapped');
+      },
+      child: FractionallySizedBox(
+        widthFactor: 1,
+        child: Container(
+          color: Colors.red[50],
+          child: Center(
+            child: Text('Jelow'),
+          ),
+        ),
+      ),
+    );
+  }
+}
