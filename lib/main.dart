@@ -42,15 +42,39 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(''),
-          ],
+          children: <Widget>[CustomBox()],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
+      ),
+    );
+  }
+}
+
+class CustomBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 50,
+      child: Listener(
+        onPointerDown: (PointerDownEvent event) {
+          RenderBox box = context.findRenderObject();
+          print('Clicked Image');
+          print(event);
+          print(event.position.dx);
+          print(box.globalToLocal(event.position));
+        },
+        onPointerMove: (PointerMoveEvent event) {
+          print('Moved');
+          print(event);
+        },
+        child: Image(
+          width: 50,
+          image: AssetImage('assets/images/skull_tattoo.png'),
+        ),
       ),
     );
   }
