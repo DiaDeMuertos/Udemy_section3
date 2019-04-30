@@ -59,6 +59,10 @@ class _MyHomePageState extends State<MyHomePage> {
             Padding(
               padding: EdgeInsets.only(bottom: 5),
               child: CustomSizedBoxLongPress(),
+            ),
+            Padding(
+              padding: EdgeInsets.only(bottom: 5),
+              child: CustomSizedBoxVerticalDrag(),
             )
           ],
         ),
