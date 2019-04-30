@@ -46,7 +46,7 @@ class CustomSizedBox extends StatelessWidget {
   }
 }
 
-class CustomSizedBoxDobleTap extends StatelessWidget {
+class CustomSizedBoxDoubleTap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -58,7 +58,7 @@ class CustomSizedBoxDobleTap extends StatelessWidget {
         child: Container(
           color: Colors.red[100],
           child: Center(
-            child: Text('Jelow Doble Tap'),
+            child: Text('Jelow Double Tap'),
           ),
         ),
       ),
