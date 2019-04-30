@@ -73,7 +73,7 @@ class CustomSizedBoxLongPress extends StatelessWidget {
       onLongPress: () {
         print('Long Pressed');
       },
-      onLongPressUp: (){
+      onLongPressUp: () {
         print('Long Press Released');
       },
       child: FractionallySizedBox(
@@ -89,3 +89,27 @@ class CustomSizedBoxLongPress extends StatelessWidget {
   }
 }
 
+class CustomSizedBoxVerticalDrag extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onVerticalDragStart: (DragStartDetails details) {
+        print('Drag Started');
+        print(details);
+      },
+      onVerticalDragUpdate: (DragUpdateDetails details) {
+        print('Drag Updated');
+        print(details);
+      },
+      child: FractionallySizedBox(
+        widthFactor: 1,
+        child: Container(
+          color: Colors.red[300],
+          child: Center(
+            child: Text('Jelow Vertical Drag'),
+          ),
+        ),
+      ),
+    );
+  }
+}
