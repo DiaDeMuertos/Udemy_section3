@@ -65,3 +65,27 @@ class CustomSizedBoxDobleTap extends StatelessWidget {
     );
   }
 }
+
+class CustomSizedBoxLongPress extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onLongPress: () {
+        print('Long Pressed');
+      },
+      onLongPressUp: (){
+        print('Long Press Released');
+      },
+      child: FractionallySizedBox(
+        widthFactor: 1,
+        child: Container(
+          color: Colors.red[200],
+          child: Center(
+            child: Text('Jelow Long Press'),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
