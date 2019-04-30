@@ -52,6 +52,10 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.only(bottom: 5),
               child: CustomSizedBox(),
             ),
+            Padding(
+              padding: EdgeInsets.only(bottom: 5),
+              child: CustomSizedBoxDobleTap(),
+            )
           ],
         ),
       ),

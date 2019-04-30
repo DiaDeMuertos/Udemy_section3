@@ -38,7 +38,27 @@ class CustomSizedBox extends StatelessWidget {
         child: Container(
           color: Colors.red[50],
           child: Center(
-            child: Text('Jelow'),
+            child: Text('Jelow Tap'),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CustomSizedBoxDobleTap extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onDoubleTap: () {
+        print('Double tapped');
+      },
+      child: FractionallySizedBox(
+        widthFactor: 1,
+        child: Container(
+          color: Colors.red[100],
+          child: Center(
+            child: Text('Jelow Doble Tap'),
           ),
         ),
       ),
