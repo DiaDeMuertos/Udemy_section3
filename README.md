@@ -13,3 +13,4 @@
 - [Long press](https://flutter.dev/docs/development/ui/advanced/gestures#gestures)
 - [Vertical drag](https://flutter.dev/docs/development/ui/advanced/gestures#gestures)
 - [Horizontal drag](https://flutter.dev/docs/development/ui/advanced/gestures#gestures)
+- [Pan](https://flutter.dev/docs/development/ui/advanced/gestures#gestures)
