@@ -138,3 +138,28 @@ class CustomSizedBoxHorizontalDrag extends StatelessWidget {
     );
   }
 }
+
+class CustomSizedBoxPan extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onHorizontalDragStart: (DragStartDetails details) {
+        print('Pan Started');
+        print(details);
+      },
+      onHorizontalDragUpdate: (DragUpdateDetails details) {
+        print('Pan Updated');
+        print(details);
+      },
+      child: FractionallySizedBox(
+        widthFactor: 1,
+        child: Container(
+          color: Colors.red[500],
+          child: Center(
+            child: Text('Jelow Pan'),
+          ),
+        ),
+      ),
+    );
+  }
+}
