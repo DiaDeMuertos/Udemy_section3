@@ -113,3 +113,28 @@ class CustomSizedBoxVerticalDrag extends StatelessWidget {
     );
   }
 }
+
+class CustomSizedBoxHorizontalDrag extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onHorizontalDragStart: (DragStartDetails details) {
+        print('Drag Started');
+        print(details);
+      },
+      onHorizontalDragUpdate: (DragUpdateDetails details) {
+        print('Drag Updated');
+        print(details);
+      },
+      child: FractionallySizedBox(
+        widthFactor: 1,
+        child: Container(
+          color: Colors.red[400],
+          child: Center(
+            child: Text('Jelow Horizontal Drag'),
+          ),
+        ),
+      ),
+    );
+  }
+}
